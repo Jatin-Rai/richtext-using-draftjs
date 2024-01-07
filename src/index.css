@@ -1,5 +1,5 @@
 body {
-  margin: 2rem 15rem;
+  margin: 2rem 2rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1rem; /* Adjusted padding for responsiveness */
 }
 
 .heading-container button {
@@ -30,4 +31,24 @@ body {
   border-radius: 5px;
   padding: 10px;
   height: 400px;
+}
+
+/* Media query for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+  body {
+    margin: 2rem 1rem; /* Adjusted margin for smaller screens */
+  }
+
+  .heading-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start on smaller screens */
+  }
+
+  .heading-container button {
+    margin-top: 1rem; /* Add space between heading and button on smaller screens */
+  }
+
+  .editor {
+    height: 300px; /* Decrease editor height for smaller screens */
+  }
 }
