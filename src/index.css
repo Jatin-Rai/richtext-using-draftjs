@@ -41,11 +41,12 @@ body {
 
   .heading-container {
     flex-direction: column; /* Stack items vertically on smaller screens */
-    align-items: flex-start; /* Align items to the start on smaller screens */
+    align-items: center; /* Align items to the start on smaller screens */
   }
 
   .heading-container button {
     margin-top: 1rem; /* Add space between heading and button on smaller screens */
+    margin-bottom: 2rem;
   }
 
   .editor {
