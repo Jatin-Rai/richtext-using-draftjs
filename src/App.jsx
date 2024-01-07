@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import EditorComponent from './components/EditorComponent';
 import { EditorState, convertFromRaw, convertToRaw, Modifier, RichUtils } from 'draft-js';
 
@@ -17,13 +17,6 @@ const App = () => {
     }
     return EditorState.createEmpty();
   });
-
-  // useEffect hook to save the editor content to localStorage when it changes
-  useEffect(() => {
-    const contentState = editorState.getCurrentContent();
-    const contentStateJson = JSON.stringify(convertToRaw(contentState));
-    localStorage.setItem('editorContent', contentStateJson);
-  }, [editorState]);
 
   /**
    * Handles input before it's inserted into the editor.
@@ -108,7 +101,7 @@ const App = () => {
   };
 
   /**
-   * Handles saving the current editor state.
+   * Handles saving the current editor state to localStorage.
    */
   const handleSave = () => {
     const contentState = editorState.getCurrentContent();
